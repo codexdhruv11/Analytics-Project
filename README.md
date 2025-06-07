@@ -1,6 +1,4 @@
 # Analytics-Project
-Perfect — here's a more **broad and powerful project description** that captures what your dashboard *can do*, not just what it's currently wired to.
-
 ---
 
 An interactive, customizable real-time analytics dashboard designed to visualize dynamic data from any source — GitHub, APIs, IoT devices, financial systems, or custom uploads. Built to be flexible, visually compelling, and developer-friendly, this dashboard is ideal for use cases like **developer analytics**, **sales tracking**, **product performance**, and **real-time reporting**.

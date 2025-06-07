@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Dashboard</title>
+  <link rel="stylesheet" href="analytics.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <h2>📊 Dashboard</h2>
+    <ul>
+      <li onclick="scrollToSection('dashboard')">Overview</li>
+      <li onclick="scrollToSection('charts')">Charts</li>
+      <li onclick="scrollToSection('settings')">Settings</li>
+    </ul>
+    <button onclick="toggleSidebar()">❌</button>
+  </div>
+
+  <div class="top-bar">
+    <button onclick="toggleSidebar()">☰</button>
+    <div id="clock"></div>
+    <input type="date" id="date-filter" />
+    <input type="text" id="search-input" placeholder="Search region..." />
+    <select id="theme-selector">
+      <option value="">Select Theme</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="blue">Blue</option>
+    </select>
+    <button id="export-btn">📤 Export CSV</button>
+  </div>
+
+  <div class="notifications">
+    <p>🔔 Sales up 15% this week!</p>
+    <p>⚠️ Bounce rate increased slightly.</p>
+  </div>
+
+  <section id="dashboard" class="dashboard">
+    <div class="kpi-card draggable" draggable="true">
+      <h2>💰 Total Sales</h2>
+      <p id="sales" class="counter">$0</p>
+    </div>
+    <div class="kpi-card draggable" draggable="true">
+      <h2>👥 Active Users</h2>
+      <p id="users" class="counter">0</p>
+    </div>
+    <div class="kpi-card draggable" draggable="true">
+      <h2>📉 Bounce Rate</h2>
+      <p id="bounce" class="counter">0%</p>
+    </div>
+    <div class="kpi-card draggable" draggable="true">
+      <h2>🧾 Revenue</h2>
+      <p id="revenue" class="counter">$0</p>
+    </div>
+  </section>
+
+  <section id="charts" class="dashboard">
+    <div class="chart-box draggable" draggable="true">
+      <h3>📊 Sales Over Time <button class="full-btn">⛶</button></h3>
+      <canvas id="salesChart"></canvas>
+    </div>
+    <div class="chart-box draggable" draggable="true">
+      <h3>📍 Regional Performance <button class="full-btn">⛶</button></h3>
+      <canvas id="regionChart"></canvas>
+    </div>
+    <div class="chart-box draggable" draggable="true">
+      <h3>📱 Device Usage <button class="full-btn">⛶</button></h3>
+      <canvas id="deviceChart"></canvas>
+    </div>
+    <div class="chart-box draggable" draggable="true">
+      <h3>🚦 Traffic Sources <button class="full-btn">⛶</button></h3>
+      <canvas id="trafficChart"></canvas>
+    </div>
+  </section>
+
+  <script src="analytics.js"></script>
+</body>
+</html>
